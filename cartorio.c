@@ -94,10 +94,10 @@ int deletar()
 {
 	char cpf[40];
 	
-	printf("Digite o CPF do usuário a ser deletado: ");
-	scanf("%s",cpf);
+	printf("Digite o CPF do usuário a ser deletado: "); //opção de deletar cpf
+	scanf("%s",cpf); //%s refere-se a string
 	
-	remove(cpf);
+	remove(cpf); //remover cpf
 	
 	FILE *file;
 	file = fopen(cpf,"r");
@@ -123,12 +123,12 @@ int main()
 	
 	    setlocale(LC_ALL, "Portuguese"); //defenindo linguagem
 	    printf("### Cartório da EBAC ###\n\n"); //inicio do menu
-	    printf("escolha a opção desejada do menu:\n\n");
-	    printf("\t1 - registrar nomes\n");
-	    printf("\t2 - consultar nomes\n");
-	    printf("\t3 - deletar nomes\n\n");
-	    printf("\t4 - sair do sistema\n\n");
-	    printf("opção:"); //fim do menu
+	    printf("escolha a opção desejada do menu:\n\n"); //opção de escolha
+	    printf("\t1 - registrar nomes\n"); //opção de registrar nomes
+	    printf("\t2 - consultar nomes\n"); //opção de consultar nomes
+	    printf("\t3 - deletar nomes\n\n"); //opção de excluir nomes
+	    printf("\t4 - sair do sistema\n\n"); //opção de sair do sistema
+	    printf("opção: "); //fim do menu
 	
 	    scanf("%d", &opcao); //armazenando escolha do usuário
 	
@@ -150,7 +150,7 @@ int main()
 		    break;
 		    
 		    case 4:
-		    printf("obigado por utilizar o sistema\n");
+		    printf("obrigado por utilizar o sistema!\n");
 		    return 0;
 		    break;
 					    
